@@ -37,6 +37,11 @@ article {
     width: 100%;
 }
 
+#sign_up {
+    display: flex;
+    flex: 0 1 auto;
+}
+
 section {
     display: flex;
     background-color: var(--color-white);
@@ -56,14 +61,14 @@ header h1 {
 }
 
 .info h1 {
-    font-size: 5rem;
-    text-wrap: nowrap;
+    font-size: 5.5rem;
 }
 
 .info {
     display: flex;
     flex-direction: column;
     margin: 2rem;
+    width: 50%;
 }
 
 .info>* {
@@ -138,6 +143,7 @@ img {
     display: flex;
     align-items: center;
     margin: auto 2rem;
+    flex: 0 auto;
 }
 
 #success {
@@ -178,3 +184,45 @@ img {
 .success {
     padding: 3rem;
 }
+
+span {
+    font-family: Roboto-Bold;
+}
+
+@media (max-width: 820px) {
+    body {
+      background-color: var(--color-white);
+      margin: 0rem;
+    }
+
+    header {
+      display: none;
+    }
+
+    article {
+      background-color: var(--color-white);
+    }
+
+    section {
+      margin: 0rem;
+      flex-direction: column;
+    }
+
+    .info {
+      order: 1;
+      width: auto;
+    }
+
+    .photo > figure > img {
+        content: url("assets/images/illustration-sign-up-mobile.svg");
+    }
+
+    .photo {
+      margin: 0rem;
+      display: block;
+    }
+
+    #success {
+      margin: 0rem;
+    }
+  }

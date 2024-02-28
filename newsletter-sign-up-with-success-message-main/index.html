@@ -42,6 +42,7 @@
   </header>
   <main>
     <article id="article">
+      <!-- Added inline CSS so that the property can be accessed in JavaScript -->
       <section id="sign_up" style="display: flex;">
         <div class="info">
           <!-- Sign-up form start -->
@@ -54,12 +55,15 @@
           </ul>
           <form id="form" method="post">
             <div class="name">
-              <label for="user_name" id="user_name_label">Name</label><br>
-              <input type="text" placeholder="John Doe" name="user_name" id="user_name" minlength="2" required><br>
+              <label for="user_name" id="user_name_label">Name</label>
+              <!-- Added a custom error message that appears when the form input is invalid on submission -->
+              <input type="text" placeholder="John Doe" name="user_name" id="user_name" minlength="2" required
+                oninvalid="this.setCustomValidity('Name must have at least two characters.')"><br>
             </div>
             <div class="email">
-              <label for="user_email" id="user_email_label">Email address</label><br>
-              <input type="email" placeholder="email@company.com" name="user_email" id="user_email" required><br>
+              <label for="user_email" id="user_email_label">Email address</label>
+              <input type="email" placeholder="email@company.com" name="user_email" id="user_email" required
+                oninvalid="this.setCustomValidity('Valid email required.')"><br>
             </div>
             <input type="submit" value="Subscribe to monthly newsletter" id="subscribe_button"></input>
           </form>
@@ -94,6 +98,7 @@
       Coded by <a href="https://github.com/Kate1121">Kaitlyn Francis</a>.
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
