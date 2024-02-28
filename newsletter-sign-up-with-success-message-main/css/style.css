@@ -1,0 +1,180 @@
+:root {
+    --color-dark-slate-grey: hsl(234, 29%, 20%);
+    --color-charcoal-grey: hsl(235, 18%, 26%);
+    --color-grey: hsl(231, 7%, 60%);
+    --color-light-grey: hsl(231, 25%, 90%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-tomato: hsl(4, 100%, 67%);
+}
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
+body {
+    background-color: var(--color-light-grey);
+    margin: 3%;
+    font-family: Roboto-Regular;
+    color: var(--color-dark-slate-grey);
+    font-size: 1.5rem;
+}
+
+article {
+    background-color: var(--color-charcoal-grey);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    margin: 5rem;
+}
+
+h1 {
+    font-family: Roboto-Bold;
+    font-size: 3rem;
+    margin: 0rem;
+}
+
+header h1 {
+    text-align: center;
+    margin: 1rem;
+}
+
+.info h1 {
+    font-size: 5rem;
+    text-wrap: nowrap;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.info>* {
+    padding: 1rem 0rem;
+}
+
+.info>ul {
+    padding: 0rem;
+}
+
+li {
+    padding: 0.5rem 0rem;
+    list-style-image: url("assets/images/icon-list.svg");
+    list-style-position: inside;
+}
+
+form>* {
+    margin: 0.5rem 0rem;
+}
+
+label {
+    font-family: Roboto-Bold;
+    font-size: 1rem;
+}
+
+label~input {
+    padding: 1rem 0rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1.5rem;
+    text-indent: 1rem;
+}
+
+input[type="text"], input[type="email"] {
+    outline: none;
+    transition: 0.5s;
+}
+
+input[type="text"]:hover, input[type="email"]:hover {
+    cursor: pointer;
+}
+
+input[type="text"]:required:focus:invalid, input[type="email"]:required:focus:invalid {
+    border: 0.1rem solid var(--color-tomato);
+    background-color: rgba(248, 80, 80, 0.436);
+}
+
+input[type="submit"], input[type="button"] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-family: Roboto-Bold;
+    color: var(--color-white);
+    background-color: var(--color-dark-slate-grey);
+    font-size: 1rem;
+    transition: 1s;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-image: linear-gradient(to right, #f84a7e, var(--color-tomato));
+    color: var(--color-white);
+    box-shadow: 0rem 0rem 0.3rem black;
+    cursor: pointer;
+    transform: scale(105%);
+}
+
+img {
+    width: 100%;
+}
+
+.photo {
+    display: flex;
+    align-items: center;
+    margin: auto 2rem;
+}
+
+#success {
+    margin: 10rem 20rem;
+}
+
+.success>* {
+    padding: 1rem 0rem;
+}
+
+.success>figure>img {
+    width: 5rem;
+    animation: bounce 0.8s ease;
+}
+
+@keyframes bounce {
+    0% {
+      transform: translate(0rem, 0rem);
+    }
+
+    25% {
+      transform: translate(0rem, -3rem);
+    }
+
+    50% {
+      transform: translate(0rem, 0rem);
+    }
+
+    75% {
+      transform: translate(0rem, -1.5rem);
+    }
+
+    100% {
+      transform: translate(0rem, 0rem);
+    }
+}
+
+.success {
+    padding: 3rem;
+}
